@@ -1,0 +1,97 @@
+html, body {
+    margin: 0;
+    padding:0;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0.7rem;
+    background-color: white;
+    align-items: center;
+}
+.image-container{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+.featuresIntro-container{
+    display: flex;
+    padding: 0.5rem 0.7rem;
+}
+
+
+
+
+
+#header-logo{
+    display: inline-block;
+    padding: 0.5rem 0.5rem;
+    font-size: 24px;
+    text-align: center;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+#header-login{
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    text-align: center;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
+#header-login:hover{
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    text-align: center;
+    background-color: white;
+    color: rgb(92, 92, 92);
+    border: none;
+    border-radius: 10px;
+}
+
+#header-signup{
+    padding: 0.7rem 1rem;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgb(80, 126, 207);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+#header-signup:hover{
+    padding: 0.7rem 1rem;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgb(64, 107, 183);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.image-container img{
+    display: block;
+    padding: 0.2rem 0rem;
+    width: 100%;
+    height: auto;
+}
+.overlay-text{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 50px;
+    text-align: center;
+    text-emphasis: bolder(20px);
+}
+
+.welcome-text{
+    padding: 0.5rem 1rem;
+    font-size: 35px;
+}
