@@ -3,7 +3,7 @@ html, body {
     padding:0;
 }
 
-
+/* Logo, login, get started */
 .header{
     display: flex;
     justify-content: space-between;
@@ -12,43 +12,82 @@ html, body {
     align-items: center;
 }
 
+/* Image */
 .image-container{
     position: relative;
     width: 100%;
     margin: 0 auto;
 }
 
+/* Welcome to bigbrains */
 .featuresIntro-container{
     display: flex;
-    padding: 0.5rem 0.7rem;
+    padding: 1rem 0.7rem;
 }
 
+/* feature and buttons */
 .feature-container{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 1px 1px;
+    padding: 2px 1px;
+    margin-bottom: 4rem;
 }
 .collaborate-featurebox{
     width: 400px;
-    height: 700px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #fff5ae;
     border: none;
     border-radius: 30px;
+    box-shadow: 30px 30px 10px rgba(39, 39, 39, 0.2);
+}
+.collaborate-featurebox:hover{
+    transform: scale(1.05);
 }
 .library-featurebox{
     width: 400px;
-    height: 700px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #00aec7;
     border: none;
     border-radius: 30px;
+    box-shadow: 30px 30px 10px rgba(39, 39, 39, 0.2);
+}
+.library-featurebox:hover{
+    transform: scale(1.05);
 }
 .goals-featurebox{
     width: 400px;
-    height: 700px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(148, 223, 223);
     border: none;
     border-radius: 30px;
+    box-shadow: 30px 30px 10px rgba(39, 39, 39, 0.2);
+}
+.goals-featurebox:hover{
+    transform: scale(1.05);
+}
+
+.user-review{
+    width: 100%;
+    background-color: rgb(195, 220, 255);
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+.user-review-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
 
@@ -113,15 +152,21 @@ html, body {
 }
 .overlay-text{
     position: absolute;
-    top: 90%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
     font-size: 50px;
     text-align: center;
     text-emphasis: bolder(20px);
+}
+@media screen and (max-width: 768px){
+    .overlay-text{
+        font-size: 15px;
+        top: 80%;
+    }
 }
 
 .welcome-text{
@@ -132,15 +177,99 @@ html, body {
 .collaborate-featurebox img{
     width: 100%;
     height: auto;
+    padding: 20px 0px;
+    border-radius: 10px;
+}
+.collaborate-featurebox div{
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    padding: 30px 10px;
+}
+.collaborate-featurebox p{
+    font-size: 22px;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0;
+    background-color: #fff5ae;
     border-radius: 30px;
 }
+.collaborate-featurebox button{
+    padding: 10px 20px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    background-color: #febe3f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+
 .library-featurebox img{
     width: 100%;
     height: auto;
     border-radius: 30px;
 }
+.library-featurebox div{
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    padding: 30px 10px;
+}
+.library-featurebox p{
+    font-size: 22px;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0;
+    background-color: #00aec7;
+    border-radius: 30px;
+}
+.library-featurebox button{
+    padding: 10px 20px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    background-color: #1171ad;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+
 .goals-featurebox img{
     width: 100%;
     height: auto;
     border-radius: 30px;
+}
+.goals-featurebox div{
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 20px;
+}
+.goals-featurebox p{
+    font-size: 22px;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0;
+    background-color: rgb(148, 223, 223);
+    border-radius: 30px;
+}
+.goals-featurebox button{
+    padding: 10px 20px;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    background-color: rgb(93, 205, 205);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.user-review-text{
+    padding: 20px;
+    font-size: 35px;
+    margin-top: 5rem;
 }
