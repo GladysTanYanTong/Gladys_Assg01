@@ -1,30 +1,52 @@
 html, body {
-    margin: 0;
-    padding:0;
+    margin-top: 0px;
+	margin-right: 0px; 
+	margin-bottom: 0px;
+	margin-left: 0px;
     font-family: Itim, sans-serif;
+}
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 1000px;
+	background-color: #FFFFFF;
 }
 
 /* Logo, login, get started */
-.navigation{
+header {
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3000;
+    width: 100%;
+    height: 6%;
     padding: 0.3rem 0.7rem;
     background-color: white;
     align-items: center;
-    margin: 0.2rem;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
 
-#header-logo{
-    display: inline-block;
-    padding: 0.5rem 0.5rem;
+.header-logo{
+    display: inline;
+    color: black;
+    text-align: undefined;
+    width: 50%;
+    margin-top: 15px;
+    margin-left: 15px;
+    letter-spacing: 1px;
     font-size: 24px;
-    text-align: center;
-    background-color: white;
-    border: none;
-    border-radius: 10px;
+}
+.account-setup{
+    margin-right: 25px;
 }
 
-#header-login{
+.account-setup #login{
     padding: 0.5rem 1rem;
     font-size: 16px;
     text-align: center;
@@ -32,7 +54,7 @@ html, body {
     border: none;
     border-radius: 10px;
 }
-#header-login:hover{
+.account-setup #login:hover{
     padding: 0.5rem 1rem;
     font-size: 16px;
     text-align: center;
@@ -42,7 +64,7 @@ html, body {
     border-radius: 10px;
 }
 
-#header-signup{
+.account-setup #signup{
     padding: 0.7rem 1rem;
     font-size: 16px;
     text-align: center;
@@ -51,7 +73,7 @@ html, body {
     border: none;
     border-radius: 10px;
 }
-#header-signup:hover{
+.account-setup #signup:hover{
     padding: 0.7rem 1rem;
     font-size: 16px;
     text-align: center;
@@ -63,26 +85,22 @@ html, body {
 
 /* Image */
 .image-container{
+    background-image: url('images/students-studying.jpg');
     position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    margin: 0 auto;
+    height: 80vh;
 }
-
-.image-container img{
-    display: block;
-    padding: 0.2rem 0rem;
-    width: 100%;
-    height: auto;
-}
-.overlay-text{
+.image-container h2{
+    font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    top: 90%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    padding: 10px 30px;
-    border: none;
-    font-size: 50px;
+    font-size: 35px;
     text-align: center;
     text-emphasis: bolder(20px);
 }
@@ -92,25 +110,34 @@ html, body {
     display: flex;
     padding: 1rem 0.7rem;
 }
-.welcome-text{
-    padding: 0.5rem 1rem;
-    font-size: 35px;
+.featuresIntro-container h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 10px 10px;
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: left;
 }
 
 /* feature and buttons */
 .feature-container{
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 2px 1px;
     margin-bottom: 4rem;
 }
-@media (min-width: 768px){
-    
-    .feature-container{
-        flex-wrap: wrap;
-    }
+.feature-column{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex: 33%;
+    justify-content: space-evenly;
 }
+/* @media screen and (min-width: 576px){
+    html{flex-wrap: wrap;}
+} */
     
 
 /* collaborate */
@@ -119,6 +146,7 @@ html, body {
     height: 650px;
     display: flex;
     flex-direction: column;
+    margin: 20px;
     align-items: center;
     background-color: #fff5ae;
     border: none;
@@ -134,9 +162,10 @@ html, body {
     padding: 20px 0px;
     border-radius: 10px;
 }
-.collaborate-featurebox div{
+.collaborate-featurebox h3{
     font-size: 32px;
     text-align: center;
+    font-weight: lighter;
     margin: 0;
     padding: 30px 10px;
 }
@@ -175,6 +204,7 @@ html, body {
     height: 650px;
     display: flex;
     flex-direction: column;
+    margin: 20px;
     align-items: center;
     background-color: #00aec7;
     border: none;
@@ -189,9 +219,10 @@ html, body {
     height: auto;
     border-radius: 30px;
 }
-.library-featurebox div{
+.library-featurebox h3{
     font-size: 32px;
     text-align: center;
+    font-weight: lighter;
     margin: 0;
     padding: 30px 10px;
 }
@@ -230,6 +261,7 @@ html, body {
     height: 650px;
     display: flex;
     flex-direction: column;
+    margin: 20px;
     align-items: center;
     background-color: rgb(148, 223, 223);
     border: none;
@@ -244,9 +276,10 @@ html, body {
     height: auto;
     border-radius: 30px;
 }
-.goals-featurebox div{
+.goals-featurebox h3{
     font-size: 32px;
     text-align: center;
+    font-weight: lighter;
     margin: 0;
     padding: 20px 20px;
 }
@@ -290,19 +323,26 @@ html, body {
     text-align: center;
 }
 .user-review-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
+    width: 100%;
+    max-width: 40%;
     margin: 20px auto;
-    padding: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.comment{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.review{
+    flex: 1;
 }
 .user-review-text{
     padding: 20px;
     font-size: 35px;
     margin-top: 3rem;
 }
-.user-review-box div{
+.user-review-box .review{
     width: 40%;
     height: auto;
     padding: 5px 20px;
@@ -320,31 +360,19 @@ html, body {
     margin-bottom: 10px;
 }
 
-/* encourage sign up for free acct */
+/*sign up for free acct */
 .signup-account{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
+    max-width: 100%;
     height: auto;
     margin: 20px 40px;
     margin-bottom: 50px;
 }
-
-.join-bigbrains-content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 40px 50px;
-    padding-right: 10rem;
-}
-.join-bigbrains-text{
-    width: 400px;
-    height: auto;
-    font-size: 180%;
-    text-align: center;
-    align-content: center;    
-}
 .join-bigbrains{
+    width: 60%;
     text-align: left;
     margin: 10px 5px;
 }
@@ -356,16 +384,39 @@ html, body {
     margin: 2px;
 }
 
-.join-bigbrains-content img{
+.join-bigbrains-column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 100%;
+    margin: 40px 50px;
+    margin: 10px;
+}
+.join-bigbrains-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;    
+    flex-wrap: wrap;
+    width: 60%;
+    font-size: 180%;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.join-bigbrains-column img{
     width: 40%;
+    max-width: 100%;
     height: auto;
-    margin-top: 40px;
+    margin: 10px;
 }
 #join-signup{
-    size: 180%;
-    padding: 20px 35px;
+    width: 40%;
+    padding: 20px 10px;
     font-size: 27px;
     text-align: center;
+    align-self: center;
     background-color: rgb(80, 126, 207);
     color: white;
     border: none;
@@ -373,10 +424,11 @@ html, body {
     margin-top: 20px;
 }
 #join-signup:hover{
-    size: 180%;
-    padding: 20px 35px;
+    width: 40%;
+    padding: 20px 10px;
     font-size: 27px;
     text-align: center;
+    align-self: center;
     background-color: rgb(51, 92, 162);
     color: white;
     border: none;
@@ -460,6 +512,7 @@ html, body {
     background-color: rgb(30, 30, 30);
     color: white;
     width: 100%;
+    max-width: 100%;
     height: auto;
     margin: 0px;
     padding-left: 20px;

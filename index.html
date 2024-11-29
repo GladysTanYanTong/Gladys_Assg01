@@ -13,75 +13,100 @@
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Itim&family=Knewave&family=Oswald:wght@200..700&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="navigation">
-        <div>
-            <button id="header-logo" style="font-family: 'Knewave', sans-serif;">Big Brains</button> 
-        </div>
-        <div>
-            <button id="header-login">Login</button>
-            <button id="header-signup">Get Started</button>
-        </div>
-    </div>
-    <div class="image-container">
-        <img src="images/students-studying.jpg" alt="students studying">
-        <div class="overlay-text">Study, Share, Succeed - Together</b></div>
-    </div>
-    <div class="featuresIntro-container">
-        <div class="welcome-text">Welcome to Big Brains!</div>
-    </div>
-    <div class="feature-container">
-        <div class="collaborate-featurebox">
-            <div class="collaborate-descbox">Collaborate in Real-Time</div>
-            <img src="images/video-call.jpg" alt="zoom video call vector">
-            <p class="collaborate-descbox">Create study groups with peers and friends, discuss questions and share notes over video calls and chats.</p>
-            <button id="collaborate" style="font-family: Itim, sans-serif;">Join Study Group</button>
-        </div>
-        <div class="library-featurebox">
-            <div class="library-descbox">Access our Library</div>
-            <img src="images/library.jpg" alt="man reading ontop of very large books vector">
-            <p class="collaborate-descbox">A library of notes, quizzes, practice papers and study guides across various subjects at your fingertips.</p>
-            <button id="library" style="font-family: Itim, sans-serif;">Library</button>
-        </div>
-        <div class="goals-featurebox">
-            <div class="goals-descbox">Be Organised and Motivated</div>
-            <img src="images/goals.jpg" alt="man infront of a checklist with a target board beside him">
-            <p class="collaborate-descbox">Save your study materials and track your study progress. Set your own goals and reminders for practices and meetings.</p>
-            <button id="goals" style="font-family: Itim, sans-serif;">Manage Materials</button>
-        </div>
-    </div>
-    <div class="user-review">
+<!-- Main Container -->
+<div class="container">
+    <!-- header -->
+    <header>
+        <a href="">
+            <h4 class="header-logo" style="font-family: 'Knewave', sans-serif;">Big Brains</h4> 
+        </a>
+        <div class="account-setup">
+            <button id="login">Login</button>
+            <button id="signup">Get Started</button>
+        </div>  
+    </header>
+    <section class="image-container">
+        <h2>Study, Share, Succeed - Together</b></h2>
+    </section>
+
+    <!-- features -->
+    <section class="featuresIntro-container">
+        <h3>Welcome to Big Brains!</h3>
+    </section>
+    <section class="feature-container">
+        <article class="feature-column">  
+            <div class="collaborate-featurebox">
+                <h3>Collaborate in Real-Time</h3>
+                <img src="images/video-call.jpg" alt="zoom video call vector">
+                <p>Create study groups with peers and friends, discuss questions and share notes over video calls and chats.</p>
+                <button id="collaborate" style="font-family: Itim, sans-serif;">Join Study Group</button>
+            </div>
+        </article>
+        <article class="feature-column">
+            <div class="library-featurebox">
+                <h3>Access our Library</h3>
+                <img src="images/library.jpg" alt="man reading ontop of very large books vector">
+                <p>A library of notes, quizzes, practice papers and study guides across various subjects at your fingertips.</p>
+                <button href="library.html" id="library" style="font-family: Itim, sans-serif;">Library</button>
+            </div>
+        </article>
+        <article class="feature-column"> 
+            <div class="goals-featurebox">
+                <h3>Be Organised and Motivated</h3>
+                <img src="images/goals.jpg" alt="man infront of a checklist with a target board beside him">
+                <p>Save your study materials and track your study progress. Set your own goals and reminders for practices and meetings.</p>
+                <button id="goals" style="font-family: Itim, sans-serif;">Manage Materials</button>
+            </div>
+        </article>
+    </section>
+
+    <!-- user reviews -->
+    <section class="user-review">
         <h2 class="user-review-text">What Some of Our Users Have Said:</h2>
-        <div class="user-review-box">
-            <div class="user-review">
-                <p>"The study group I joined for chemistry saved my grades. We shared any useful notes we had and were able to help each other out with different problems."</p>
-                <span>~ Jerry, Sec Sch Student</span>
+        <article class="user-review-box">
+            <div class="comment">
+                <img src="images/Tutter-with-Sunglasses.png" alt="Tutter the blue mouse with sunglasses" width="150px" height=auto>
+                <div class="review">
+                    <p>"The study group I joined for chemistry saved my grades. We shared any useful notes we had and were able to help each other out with different problems."</p>
+                    <span>~ Jerry, Sec Sch Student</span>
+                </div>
             </div>
-            <div class="user-review">
-                <p>The library is amazing! There are so many study guides, practice papers and other school’s past exam papers submitted by other users. Thank you!! I would never have access to these otherwise.</p>
-                <span>~ Mickey, JC Student</span>
+            <div class="comment">
+                <img src="images/dog-cat-chomp.png" alt="cartoon dog biting cat" width="150px" height=auto>
+                <div class="review">
+                    <p>The library is amazing! There are so many study guides, practice papers and other school’s past exam papers submitted by other users. Thank you!! I would never have access to these otherwise.</p>
+                    <span>~ Mickey, JC Student</span>
+                </div>
             </div>
-            <div class="user-review">
-                <p>The goal setting really helped me stay on track on what to study and provided some motivating words that kept me going!</p>
-                <span>~ Tutter, Poly Student</span>
+            <div class="comment">
+                <img src="images/fish-proposing.png" alt="fish from barbie proposing" width="150px" height="auto">
+                <div class="review">
+                    <p>The goal setting really helped me stay on track on what to study and provided some motivating words that kept me going!</p>
+                    <span>~ Tutter, Poly Student</span>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="signup-account">
+        </article>
+    </section>
+
+    <!-- sign up for free -->
+    <section class="signup-account">
         <div class="join-bigbrains">
             <h2>Join Big Brains Today!</h2>
             <p>Take your studying to the next level by embarking in this journey.</p>
             <p>Sign up now and collaborate with peers! Be it a study group, or a bit of motivation, Big Brains has all you need to succeed.</p>
             <p>All the best for your studies!</p>
         </div>
-        <div class="join-bigbrains-content">
+        <article class="join-bigbrains-column">
             <img src="images/track-progress.jpg" alt="staircase showing progress">
             <div class="join-bigbrains-text">
                 <h2>Track Your Progress</h2>
                 <p>Log in to your account to start joining others and staying motivated!</p>
                 <button id="join-signup" style="font-family: Itim, sans-serif;">Sign Up for Free</button>
             </div>
-        </div>
-    </div>
+        </article>
+    </section>
+
+
     <div class="bigbrainsplus">
         <div class="intro-bigbrainsplus">
             <h2>Get Big Brains Plus+</h2>
@@ -112,7 +137,7 @@
                 <p>Study materials and video lectures are downloadable for offline access</p>
             </data>
         </div>
-        <button class="plus-learnmore" style="font-family: Itim, sans-serif;">Learn More</button>
+        <button class="plus-learnmore" style="font-family: Itim, sans-serif;"><a href="bigbrainsplus.html">Learn More</a></button>
     </div>
     <div class="footer">
         <div class="footer-logo">
@@ -146,5 +171,6 @@
         </div>
         <div class="copyright">© 2024 Big Brains - All rights reserved</div>
     </div>
+</div>
 </body>
 </html>
