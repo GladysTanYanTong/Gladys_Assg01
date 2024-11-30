@@ -17,14 +17,46 @@
 <div class="container">
     <!-- header -->
     <header>
-        <a href="">
+        <!-- <a href="index.html">
             <h4 class="header-logo" style="font-family: 'Knewave', sans-serif;">Big Brains</h4> 
         </a>
         <div class="account-setup">
             <button id="login">Login</button>
             <button id="signup">Get Started</button>
-        </div>  
+        </div>   -->
+        <nav>
+            <ul class="sidebar">
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="black"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="index.html" style="font-family: Knewave, sans-serif;">BigBrains</a></li>
+                <li><a href="#">Collaborate</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="#">Goals</a></li>
+                <li><a href="bigbrainsplus.html">Big Brains Plus</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+    
+            <ul>
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                <li><a href="index.html" style="font-family: Knewave, sans-serif;">BigBrains</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+                sidebar.style.color = 'white'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+                sidebar.style.color = 'white'
+            }
+        </script>
     </header>
+
     <section class="image-container">
         <h2>Study, Share, Succeed - Together</b></h2>
     </section>
@@ -47,7 +79,7 @@
                 <h3>Access our Library</h3>
                 <img src="images/library.jpg" alt="man reading ontop of very large books vector">
                 <p>A library of notes, quizzes, practice papers and study guides across various subjects at your fingertips.</p>
-                <button href="library.html" id="library" style="font-family: Itim, sans-serif;">Library</button>
+                <button id="library" style="font-family: Itim, sans-serif;"><a href=library.html>Library</a></button>
             </div>
         </article>
         <article class="feature-column"> 
@@ -65,7 +97,7 @@
         <h2 class="user-review-text">What Some of Our Users Have Said:</h2>
         <article class="user-review-box">
             <div class="comment">
-                <img src="images/Tutter-with-Sunglasses.png" alt="Tutter the blue mouse with sunglasses" width="150px" height=auto>
+                <img src="images/fish-proposing.png" alt="fish from barbie proposing" width="150px" height="auto">
                 <div class="review">
                     <p>"The study group I joined for chemistry saved my grades. We shared any useful notes we had and were able to help each other out with different problems."</p>
                     <span>~ Jerry, Sec Sch Student</span>
@@ -79,7 +111,7 @@
                 </div>
             </div>
             <div class="comment">
-                <img src="images/fish-proposing.png" alt="fish from barbie proposing" width="150px" height="auto">
+                <img src="images/Tutter-with-Sunglasses.png" alt="Tutter the blue mouse with sunglasses" width="150px" height=auto>
                 <div class="review">
                     <p>The goal setting really helped me stay on track on what to study and provided some motivating words that kept me going!</p>
                     <span>~ Tutter, Poly Student</span>
@@ -106,40 +138,44 @@
         </article>
     </section>
 
-
-    <div class="bigbrainsplus">
-        <div class="intro-bigbrainsplus">
+    <!-- big brains plus -->
+    <section class="bigbrainsplus">
+        <article class="intro-bigbrainsplus">
             <h2>Get Big Brains Plus+</h2>
             <h3>to unlock premium features:</h3>
-        </div>
-        <div class="plus-feature">
-            <img src="images/check-icon.jpg" alt="check-icon">
-            <h3>Ad-Free Experience</h3>
-        </div>
-        <div class="plus-feature">
-            <img src="images/check-icon.jpg" alt="check-icon">
-            <div class="plus-feature-text">
-                <h3>Practice Tests with Analytics</h3>
-                <p>Detailed insights on your strengths and weaknesses will be given, along with recommended improvements</p>
+        </article>
+        <article class="plus-features">
+            <div class="plus-feature">
+                <img src="images/check-icon.jpg" alt="check-icon">
+                <h3>Ad-Free Experience</h3>
             </div>
-        </div>
-        <div class="plus-feature">
-            <img src="images/check-icon.jpg" alt="check-icon">
-            <div class="plus-feature-text">
-                <h3>Additional Study Materials</h3>
-                <p>Higher-quality, premium study materials such as textbooks, in-depth tutorials and lecture videos</p>
+            <div class="plus-feature">
+                <img src="images/check-icon.jpg" alt="check-icon">
+                <div class="plus-feature-text">
+                    <h3>Practice Tests with Analytics</h3>
+                    <p>Detailed insights on your strengths and weaknesses will be given, along with recommended improvements</p>
+                </div>
             </div>
-        </div>
-        <div class="plus-feature">
-            <img src="images/check-icon.jpg" alt="check-icon">
-            <data class="plus-feature-text">
-                <h3>Downloadable Material</h3>
-                <p>Study materials and video lectures are downloadable for offline access</p>
-            </data>
-        </div>
+            <div class="plus-feature">
+                <img src="images/check-icon.jpg" alt="check-icon">
+                <div class="plus-feature-text">
+                    <h3>Additional Study Materials</h3>
+                    <p>Higher-quality, premium study materials such as textbooks, in-depth tutorials and lecture videos</p>
+                </div>
+            </div>
+            <div class="plus-feature">
+                <img src="images/check-icon.jpg" alt="check-icon">
+                <data class="plus-feature-text">
+                    <h3>Downloadable Material</h3>
+                    <p>Study materials and video lectures are downloadable for offline access</p>
+                </data>
+            </div>
+        </article>
         <button class="plus-learnmore" style="font-family: Itim, sans-serif;"><a href="bigbrainsplus.html">Learn More</a></button>
-    </div>
-    <div class="footer">
+    </section>
+
+    <!-- footer section -->
+    <footer>
         <div class="footer-logo">
             <p style="font-family: Knewave, sans-serif;">Big Brains</p>
         </div>
@@ -170,7 +206,7 @@
             </div>
         </div>
         <div class="copyright">© 2024 Big Brains - All rights reserved</div>
-    </div>
+    </footer>
 </div>
 </body>
 </html>

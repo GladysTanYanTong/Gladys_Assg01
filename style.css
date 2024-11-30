@@ -1,6 +1,14 @@
+*{
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+}
+
 html, body {
+    max-width: 100%;
+    min-height: 100vh;
     margin-top: 0px;
-	margin-right: 0px; 
+	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
     font-family: Itim, sans-serif;
@@ -14,7 +22,7 @@ html, body {
 }
 
 /* Logo, login, get started */
-header {
+/* header {
     display: flex;
     justify-content: space-between;
     position: sticky;
@@ -26,12 +34,64 @@ header {
     background-color: white;
     align-items: center;
     margin: 0;
+    box-sizing: border-box;
+} */
+nav{
+    background-color: white;
+    box-sizing: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
-a{
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 60px;
+}
+nav a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
-    color: white;
+    color: black;
 }
-
+nav a:hover{
+    color: gray;
+}
+nav ul:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+}
+.sidebar li, .sidebar a{
+    width: 100%;
+}
+/* a{
+    text-decoration: none;
+    font-weight: lighter;
+    color: white;
+    align-content: center;
+    transition: all 0.3s linear;
+}
+header a{
+    color: black !important;
+}
 .header-logo{
     display: inline;
     color: black;
@@ -81,7 +141,7 @@ a{
     color: white;
     border: none;
     border-radius: 10px;
-}
+} */
 
 /* Image */
 .image-container{
@@ -104,6 +164,7 @@ a{
     text-align: center;
     text-emphasis: bolder(20px);
 }
+
 
 /* Welcome to bigbrains */
 .featuresIntro-container{
@@ -138,7 +199,7 @@ a{
 /* @media screen and (min-width: 576px){
     html{flex-wrap: wrap;}
 } */
-    
+
 
 /* collaborate */
 .collaborate-featurebox{
@@ -318,9 +379,9 @@ a{
     width: 100%;
     height: auto;
     background-color: rgb(195, 220, 255);
-    color: black;
     padding: 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 .user-review-box{
     width: 100%;
@@ -368,8 +429,10 @@ a{
     width: 100%;
     max-width: 100%;
     height: auto;
-    margin: 20px 40px;
+    margin: 0;
+    padding: 40px;
     margin-bottom: 50px;
+    box-sizing: border-box;
 }
 .join-bigbrains{
     width: 60%;
@@ -398,7 +461,7 @@ a{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    align-content: center;    
+    align-content: center;
     flex-wrap: wrap;
     width: 60%;
     font-size: 180%;
@@ -464,7 +527,9 @@ a{
     margin: 10px 5px;
     color: rgb(255, 196, 19);
 }
-
+.plus-features{
+    margin-bottom: 50px;
+}
 .plus-feature{
     display: flex;
     flex-direction: row;
@@ -506,18 +571,19 @@ a{
 }
 
 /* footer */
-.footer{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(30, 30, 30);
-    color: white;
+footer{
     width: 100%;
     max-width: 100%;
-    height: auto;
-    margin: 0px;
-    padding-left: 20px;
+    background-color: rgb(30,30,30);
+    padding-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 0 auto;
+    padding: 40px;
     font-family: arial,sans-serif;
     font-size: 15px;
+    box-sizing: border-box;
 }
 .footer-logo{
     font-size: 25px;
@@ -539,5 +605,268 @@ a{
 }
 .copyright{
     margin: 20px;
-    
+}
+
+/* ===== LIBRARY ===== */
+
+/* search section */
+.search{
+    position: relative;
+    background-image: url('images/library-bookcase.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+.search::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    filter: blur(2px);
+}
+.overlay-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 2;
+}
+.overlay-content h2,.overlay-content p{
+    font-size: 30px;
+    color: white;
+    margin: 10px 0;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    max-width: 600px;
+    margin: 60px auto 0 auto;
+    border: 2px solid rgb(150,150,150);
+    border-radius: 30px;
+    background: white;
+    z-index: 3;
+}
+.search-bar input{
+    flex:1;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.search-bar button{
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* my-library section */
+.my-library{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    width: 70%;
+    margin: 50px auto;
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+.my-library h2{
+    font-size: 35px;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 0;
+    color: black;
+}
+.add-materials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px auto;
+    background-color: #a7cdef;
+    max-width: 100%;
+    /* padding: 60px 100px; */
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.add-materials-container p{
+    font-size: 24px;
+}
+.add-materials button{
+    font-family: Itim, sans-serif;
+    width: 50%;
+    font-size: 26px;
+    font-weight: normal;
+    text-align: center;
+    background-color: #7fa7e0;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+.add-materials img{
+    margin-right: 30px;
+}
+
+/* add-materials */
+.subjects{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    width: 90%;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.subjects h2{
+    font-size: 35px;
+}
+.subjects h3{
+    font-size: 30px;
+    font-weight: lighter;
+    margin-top: 0;
+}
+.subjects article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.subjects button{
+    font-family: Itim, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: #61a1d8;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 20%;
+    margin: 10px auto;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+.subject-column{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.sec-sch button{
+    background-color: #00aec7;
+}
+.jc button{
+    background-color: rgb(93, 205, 205);
+}
+.poly button{
+    background-color: #edb84e;
+}
+
+/* ===== Big Brains Plus ===== */
+.bigbrainsplus-plans{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 30px;
+    gap: 50px;
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.bigbrainsplus-plans .monthly-plan, .bigbrainsplus-plans .annual-plan{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 10px 20px;
+    width: 400px;
+    height: 350px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: white;
+    color:black;
+}
+.bigbrainsplus-plans .price{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 0;
+    margin-bottom: 30px;
+    padding: 0;
+}
+.bigbrainsplus-plans .monthly-plan .price{
+    margin-bottom: 50px;
+}
+.bigbrainsplus-plans h1{
+    font-size: 40px;
+    margin: 0;
+}
+.bigbrainsplus-plans h3{
+    font-size: 26px;
+    margin-bottom: 50px;
+}
+.bigbrainsplus-plans p{
+    margin: 0;
+}
+.bigbrainsplus-plans button{
+    font-family: Itim, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    background-color:#febe3f;
+    color:black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.bigbrainsplus-plans button:hover{
+    font-family: Itim, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    background-color: rgb(236, 180, 13);
+    color:black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
