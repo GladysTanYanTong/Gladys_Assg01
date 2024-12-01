@@ -1,5 +1,6 @@
 *{
-    /* border: 1px solid red; */
+    border: 1px solid red;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -11,6 +12,7 @@ html, body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
+    padding: 0;
     font-family: Itim, sans-serif;
 }
 .container {
@@ -22,20 +24,6 @@ html, body {
 }
 
 /* Logo, login, get started */
-/* header {
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 3000;
-    width: 100%;
-    height: 6%;
-    padding: 0.3rem 0.7rem;
-    background-color: white;
-    align-items: center;
-    margin: 0;
-    box-sizing: border-box;
-} */
 nav{
     background-color: white;
     box-sizing: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -54,15 +42,18 @@ nav a{
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 30px;
+    padding: 0 20px;
     text-decoration: none;
     color: black;
 }
 nav a:hover{
-    color: gray;
+    color: #7e7e7e;
 }
-nav ul:first-child{
-    margin-right: auto;
+nav .navbar li:nth-child(2){
+    margin-right: auto !important;
+}
+.navbar{
+    padding: 0px 20px;
 }
 .sidebar{
     position: fixed;
@@ -71,77 +62,55 @@ nav ul:first-child{
     align-items: flex-start;
     justify-content: flex-start;
     top: 0;
-    right: 0;
+    left: 0;
     height: 100vh;
-    width: 250px;
+    width: 300px;
     z-index: 10;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.692);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
 }
 .sidebar li, .sidebar a{
     width: 100%;
 }
-/* a{
+a{
     text-decoration: none;
     font-weight: lighter;
     color: white;
     align-content: center;
     transition: all 0.3s linear;
 }
-header a{
-    color: black !important;
+.nav-signup{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 45px;
+    text-align: center;
+    background-color: rgb(94, 152, 254);
+    color: white !important;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
 }
-.header-logo{
-    display: inline;
-    color: black;
-    text-align: undefined;
-    width: 50%;
-    margin-top: 15px;
-    margin-left: 15px;
-    letter-spacing: 1px;
+.nav-signup a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    padding: 0 20px;
+}
+.nav-signup a:hover{
+    background-color: rgb(72, 120, 203);
+    border-radius: 10px;
+    color: white;
+}
+.logo{
     font-size: 24px;
 }
-.account-setup{
-    margin-right: 25px;
-}
 
-.account-setup #login{
-    padding: 0.5rem 1rem;
-    font-size: 16px;
-    text-align: center;
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-}
-.account-setup #login:hover{
-    padding: 0.5rem 1rem;
-    font-size: 16px;
-    text-align: center;
-    background-color: white;
-    color: rgb(92, 92, 92);
-    border: none;
-    border-radius: 10px;
-}
 
-.account-setup #signup{
-    padding: 0.7rem 1rem;
-    font-size: 16px;
-    text-align: center;
-    background-color: rgb(80, 126, 207);
-    color: white;
-    border: none;
-    border-radius: 10px;
-}
-.account-setup #signup:hover{
-    padding: 0.7rem 1rem;
-    font-size: 16px;
-    text-align: center;
-    background-color: rgb(64, 107, 183);
-    color: white;
-    border: none;
-    border-radius: 10px;
-} */
 
 /* Image */
 .image-container{
@@ -196,10 +165,6 @@ header a{
     flex: 33%;
     justify-content: space-evenly;
 }
-/* @media screen and (min-width: 576px){
-    html{flex-wrap: wrap;}
-} */
-
 
 /* collaborate */
 .collaborate-featurebox{
@@ -393,7 +358,11 @@ header a{
 .comment{
     display: flex;
     align-items: flex-start;
+    align-content: center;
     margin-bottom: 20px;
+}
+.comment img{
+    margin-right: 20px;
 }
 .review{
     flex: 1;
@@ -406,7 +375,7 @@ header a{
 .user-review-box .review{
     width: 40%;
     height: auto;
-    padding: 5px 20px;
+    padding: 10px 20px;
     font-size:18px;
     background-color: white;
     border-radius: 20px;
@@ -417,8 +386,6 @@ header a{
     display: block;
     text-align: right;
     font-size: 18px;
-    padding: 0px 10px;
-    margin-bottom: 10px;
 }
 
 /*sign up for free acct */
@@ -450,11 +417,10 @@ header a{
 .join-bigbrains-column{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
     max-width: 100%;
-    margin: 40px 50px;
-    margin: 10px;
 }
 .join-bigbrains-text{
     display: flex;
@@ -463,11 +429,11 @@ header a{
     text-align: center;
     align-content: center;
     flex-wrap: wrap;
-    width: 60%;
+    width: 40%;
     font-size: 180%;
     padding-left: 10px;
     padding-right: 20px;
-}
+} 
 .join-bigbrains-column img{
     width: 40%;
     max-width: 100%;
@@ -497,7 +463,7 @@ header a{
     border: none;
     border-radius: 30px;
     margin-top: 20px;
-}
+}  
 
 /* premium acct */
 .bigbrainsplus{
@@ -510,41 +476,40 @@ header a{
     background-color: rgb(13, 0, 59);
     color: white;
     margin-bottom: 0px;
+    padding: 30px;
 }
-.intro-bigbrainsplus h2{
-    text-align: center;
-    padding: 5px 10px;
-    font-size: 38px;
-    margin-top: 3rem;
-    margin-bottom: 0rem;
+ .intro-bigbrainsplus{
     color: rgb(255, 196, 19);
-}
-.intro-bigbrainsplus h3{
-    text-align: center;
-    padding: 0px 10px;
-    font-size: 35px;
-    margin-top: 0rem;
-    margin: 10px 5px;
-    color: rgb(255, 196, 19);
-}
-.plus-features{
-    margin-bottom: 50px;
-}
-.plus-feature{
+    padding: 40px 0;
+ }
+ .intro-bigbrainsplus h2{
+    font-size: 40px;
+ }
+ .intro-bigbrainsplus h3{
+    font-size: 32px;
+ }
+ .plus-feature{
     display: flex;
     flex-direction: row;
-    font-size: 22px;
-    padding: 0px 20px;
-    align-content: left;
-    width: 600px;
-    height: auto;
-}
-.plus-feature img{
-    width: 5%;
-    height: 5%;
+    font-size: 20px;
+    align-content: center;
+    max-width: 500px;
+ }
+ .plus-feature svg{
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
     margin-right: 10px;
-    margin: 30px;
-}
+ }
+ .plus-feature-text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+ }
+ .plus-feature-text h3{
+    font-size: 26px;
+ }
 .bigbrainsplus button{
     padding: 15px 30px;
     font-size: 30px;
@@ -554,8 +519,7 @@ header a{
     color: rgb(13, 0, 59);
     border: none;
     border-radius: 20px;
-    margin: 10px;
-    margin-bottom: 40px;;
+    margin: 20px 0;
 }
 .bigbrainsplus button:hover{
     padding: 15px 30px;
@@ -566,8 +530,7 @@ header a{
     color: rgb(13, 0, 59);
     border: none;
     border-radius: 20px;
-    margin: 10px;
-    margin-bottom: 40px;;
+    margin: 20px 0;
 }
 
 /* footer */
@@ -575,12 +538,11 @@ footer{
     width: 100%;
     max-width: 100%;
     background-color: rgb(30,30,30);
-    padding-bottom: 35px;
     display: flex;
     flex-direction: column;
     color: white;
     margin: 0 auto;
-    padding: 40px;
+    padding:  30px 50px;
     font-family: arial,sans-serif;
     font-size: 15px;
     box-sizing: border-box;
@@ -588,12 +550,16 @@ footer{
 .footer-logo{
     font-size: 25px;
 }
+.social-media-icons{
+    margin-top: 10px;
+}
 .footer-links{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60%;
+    width: 50%;
     height: auto;
+    margin: 20px 0;
 }
 .footer-links li{
     margin-top: 3px;
@@ -604,7 +570,7 @@ footer{
     cursor: pointer;
 }
 .copyright{
-    margin: 20px;
+    margin-top: 20px;
 }
 
 /* ===== LIBRARY ===== */
@@ -692,11 +658,12 @@ footer{
     border-radius: 30px;
     box-sizing: border-box;
 }
-.my-library h2{
+.subjects h2{
     font-size: 35px;
     text-align: left;
     padding-left: 10px;
     padding-top: 0;
+    padding-bottom: 20px;
     color: black;
 }
 .add-materials{
@@ -810,13 +777,14 @@ footer{
     gap: 50px;
     margin: 20px;
     padding: 20px;
+    padding-bottom: 40px;
     box-sizing: border-box;
 }
 .bigbrainsplus-plans .monthly-plan, .bigbrainsplus-plans .annual-plan{
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: 10px 20px;
+    padding: 20px 20px;
     width: 400px;
     height: 350px;
     box-sizing: border-box;
@@ -830,7 +798,11 @@ footer{
     justify-content: left;
     gap: 0;
     margin-bottom: 30px;
+    margin: 20px 0;
     padding: 0;
+}
+.bigbrainsplus-plans .annual-plan .price{
+    margin-bottom: 30px;
 }
 .bigbrainsplus-plans .monthly-plan .price{
     margin-bottom: 50px;
@@ -840,7 +812,7 @@ footer{
     margin: 0;
 }
 .bigbrainsplus-plans h3{
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: 50px;
 }
 .bigbrainsplus-plans p{
