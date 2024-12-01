@@ -55,36 +55,26 @@ FEATURES:
     - Footer
 
 
-
-
-
-
-
-
-
-
-
-
 IMAGE AND ICONS SOURCES:
-check_circle (bigbrainsplus)
-close (sidebar)
-facebook (footer)
-instagram (footer)
-twitter/X (footer)
-youtube (footer)
-menu (sidebar): https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed
+- check_circle (bigbrainsplus)
+- close (sidebar)
+- facebook (footer)
+- instagram (footer)
+- twitter/X (footer)
+- youtube (footer)
+- menu (sidebar): https://fonts.google.com/icons?icon.size=24&icon.color=%23e8eaed
 Note: all icons above from google icons
 
-image-container: https://pixabay.com/photos/students-computers-laptops-smiling-1807505/
-library-bookcase (library-search-background): https://pixabay.com/photos/architecture-building-library-5705042/
+- image-container: https://pixabay.com/photos/students-computers-laptops-smiling-1807505/
+- library-bookcase (library-search-background): https://pixabay.com/photos/architecture-building-library-5705042/
 
-book-subjects (library-mylibrary): https://pixabay.com/vectors/book-study-education-school-2943367/
-goals (features-goals): https://pixabay.com/vectors/checklist-to-do-list-target-8493185/
-library (features-library): https://pixabay.com/vectors/reading-books-man-stack-education-7067799/
-video-call (features-collaborate): https://pixabay.com/vectors/zoom-remote-meeting-virtual-6861132/
-track-progress (signup): https://pixabay.com/vectors/infographic-staircase-progress-step-2895154/
-search-icon (library-search) coloured gray in photoshop: https://pixabay.com/vectors/search-find-magnifier-zoom-glass-6699087/
+- book-subjects (library-mylibrary): https://pixabay.com/vectors/book-study-education-school-2943367/
+- goals (features-goals): https://pixabay.com/vectors/checklist-to-do-list-target-8493185/
+- library (features-library): https://pixabay.com/vectors/reading-books-man-stack-education-7067799/
+- video-call (features-collaborate): https://pixabay.com/vectors/zoom-remote-meeting-virtual-6861132/
+- track-progress (signup): https://pixabay.com/vectors/infographic-staircase-progress-step-2895154/
+- search-icon (library-search) coloured gray in photoshop: https://pixabay.com/vectors/search-find-magnifier-zoom-glass-6699087/
 
-dog-cat-chomp (user-review pfp): https://i.pinimg.com/736x/42/91/f3/4291f37901b223c5cf477baa9b56f9cb.jpg
-fish-proposing (user-review pfp): https://i.pinimg.com/736x/29/c0/77/29c077706cfb7e36b6bd33c56608496f.jpg
-tutter-with-sunglasses (user-review pfp): Tutter | Disney Wiki | Fandom
+- dog-cat-chomp (user-review pfp): https://i.pinimg.com/736x/42/91/f3/4291f37901b223c5cf477baa9b56f9cb.jpg
+- fish-proposing (user-review pfp): https://i.pinimg.com/736x/29/c0/77/29c077706cfb7e36b6bd33c56608496f.jpg
+- tutter-with-sunglasses (user-review pfp): Tutter | Disney Wiki | Fandom
